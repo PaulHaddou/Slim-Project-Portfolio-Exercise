@@ -1,9 +1,9 @@
-body
+.bodyHome
 {
+    font-family: 'Montserrat', sans-serif;
     .container
     {
         margin-top: 24px;
-
         div
         {
             div
@@ -25,6 +25,58 @@ body
                         opacity: 0.6;
                         transition: opacity 0.5s ease;
                     }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+.bodyProjectPage
+{
+    font-family: 'Montserrat', sans-serif;
+    div
+    {
+        width: 100%;
+        div
+        {
+            width: 100%;
+            div
+            {
+                width: 100%;
+                a
+                {
+                    img
+                    {
+                        width: 100%;
+                    }
+                }
+                .titleProjectPage 
+                {
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                    text-decoration: none;
+                    color: black;
+                    height: 80px;
+                    display: flex;
+                    align-items: center;
+                }
+                .yearRoleCategory
+                {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 50%;
+                    color: darkgray;
+                }
+                .descriptionProjectPage
+                {
+                    margin-top: 60px;
+                    font-family: 'Source Serif Pro', serif;
+                    margin-bottom: 100px;
                 }
             }
         }

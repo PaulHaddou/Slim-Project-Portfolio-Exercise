@@ -1,6 +1,6 @@
 {% include 'partials/header.twig' %}
 
-<body>
+<body class="bodyProjectPage">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="{{ path_for('home') }}">HP</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,18 +26,24 @@
             </ul>
         </div>
     </nav>
-    <div class="container">
+    <div class="main p-0 m-0 mr-0">
         <div class="projects d-flex justify-content-between flex-wrap">
             {% for _project in projects %}
-            <div class="d-flex align-items-center flex-column flex-wrap">
-                <img src="{{ _project.img }}" alt="">
-                <p> {{ _project.name  }} </p>
-                <p> {{ _project.description  }} </p>
+            <div class="w-100 d-flex align-items-center flex-column flex-wrap">
+                <a href="https://www.haddou-dufourcq.com"><img class="w-100" src="../{{ _project.img }}" alt="dhdhd" ></a>
+                <a href="https://www.haddou-dufourcq.com" class="titleProjectPage m-0"> {{ _project.title  }} </a>
+                <div class="yearRoleCategory">
+                    <p class="yearProjectPage m-0"> {{ _project.year  }} </p>
+                    <p class="roleProjectPage m-0"> {{ _project.role  }} </p>
+                    <p class="categoryProjectPage m-0"> {{ _project.category  }} </p>
+                </div>
+                <p class="descriptionProjectPage w-75"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mollis sapien ut tincidunt egestas. Duis mollis ex consequat, condimentum dolor quis, tristique diam. Donec ut turpis sem. Phasellus ut libero in ligula scelerisque pulvinar. Aliquam erat volutpat. Suspendisse potenti. Etiam ut nibh rutrum, suscipit quam quis, mattis risus. Vestibulum ac ex non lectus ultrices posuere vel at neque. Aliquam congue, massa non porta feugiat, est tortor laoreet elit, sed hendrerit tortor sem ac ex. Sed vel semper dolor. Maecenas interdum nunc et ante tristique molestie. Vivamus a ipsum enim. Integer ultricies tempor libero sed fringilla. </p>
+                {# <p class="descriptionProjectPage"> {{ _project.description  }} </p> #}
             </div>
             {% endfor %}
         </div>
     </div>
-<h2>{{ projects.name }}</h2>
+
 
 
 

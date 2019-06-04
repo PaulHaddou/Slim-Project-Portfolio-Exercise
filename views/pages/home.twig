@@ -1,6 +1,6 @@
 {% include 'partials/header.twig' %}
 
-<body>
+<body class="bodyHome">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="{{ path_for('home') }}">HP</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +31,7 @@
             {% for _project in projects %}
             <div class="d-flex align-items-center flex-column flex-wrap">
                 <a href="{{ path_for('project', { slug: _project.slug }) }}">
-                    <img src="{{ _project.img }}" alt="dhdhd">
+                    <img src="{{ _project.img }}" alt="dhdhd" class="imgProjects">
                 </a>
                 <p> {{ _project.slug  }} </p>
             </div>

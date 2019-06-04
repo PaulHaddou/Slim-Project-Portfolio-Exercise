@@ -119,7 +119,7 @@ $app
             );
             $prepare->bindValue('slug', $arguments['slug']);
             $prepare->execute();
-            $projects = $prepare->fetch();
+            $projects = $prepare->fetchAll();
 
             // View data
             $viewData = [];

@@ -1,17 +1,57 @@
-body .container {
+.bodyHome {
+  font-family: 'Montserrat', sans-serif;
+}
+.bodyHome .container {
   margin-top: 24px;
 }
-body .container div div img {
+.bodyHome .container div div img {
   width: 60%;
   height: 20%;
 }
-body .container div div a img {
+.bodyHome .container div div a img {
   width: 250px;
   height: 180px;
 }
-body .container div div a img:hover {
+.bodyHome .container div div a img:hover {
   opacity: 0.6;
   transition: opacity 0.5s ease;
+}
+
+.bodyProjectPage {
+  font-family: 'Montserrat', sans-serif;
+}
+.bodyProjectPage div {
+  width: 100%;
+}
+.bodyProjectPage div div {
+  width: 100%;
+}
+.bodyProjectPage div div div {
+  width: 100%;
+}
+.bodyProjectPage div div div a img {
+  width: 100%;
+}
+.bodyProjectPage div div div .titleProjectPage {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.bodyProjectPage div div div .yearRoleCategory {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  color: darkgray;
+}
+.bodyProjectPage div div div .descriptionProjectPage {
+  margin-top: 60px;
+  font-family: 'Source Serif Pro', serif;
+  margin-bottom: 100px;
 }
 
 /*# sourceMappingURL=home.css.map */
