@@ -8,8 +8,8 @@
         </button>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{ path_for('home') }}">All Projects <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path_for('home') }}">All Projects</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path_for('development') }}">Development</a>
@@ -17,8 +17,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path_for('design') }}">Design</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path_for('motion') }}">Motion</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ path_for('motion') }}">Motion <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path_for('about_me') }}">About Me</a>
@@ -26,20 +26,11 @@
             </ul>
         </div>
     </nav>
-    <div class="container">
-        <div class="projects d-flex justify-content-between flex-wrap">
-            {% for _project in projects %}
-            <div class="d-flex align-items-center flex-column flex-wrap">
-                <a href="{{ path_for('project', { slug: _project.slug }) }}">
-                    <img src="{{ _project.img }}" alt="dhdhd">
-                </a>
-                <p> {{ _project.slug  }} </p>
-            </div>
-            {% endfor %}
+    <div class="container" style="margin-top=20px">
+        <div class="projects d-flex justify-content-around flex-wrap ml-5 ml-lg-0 ">
+            <img src="../src/coming-soon.png" alt="oooo">
         </div>
     </div>
 
-
-{# <a href="{{ path_for('random_student') }}">Random student</a> #}
 
 {% include 'partials/footer.twig' %}

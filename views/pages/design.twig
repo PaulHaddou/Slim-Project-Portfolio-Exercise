@@ -8,14 +8,14 @@
         </button>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{ path_for('home') }}">All Projects <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path_for('home') }}">All Projects</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path_for('development') }}">Development</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path_for('design') }}">Design</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ path_for('design') }}">Design <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path_for('motion') }}">Motion</a>
@@ -39,7 +39,5 @@
         </div>
     </div>
 
-
-{# <a href="{{ path_for('random_student') }}">Random student</a> #}
 
 {% include 'partials/footer.twig' %}

@@ -11,4 +11,5 @@ $settings['db']['host'] = 'localhost';
 $settings['db']['port'] = '3306';
 $settings['db']['user'] = 'root';
 $settings['db']['pass'] = 'root';
-$settings['db']['name'] = 'hetic_p2022_g1_students';
+$settings['db']['name'] = 'slim-project-db';
+// $settings['db']['name'] = 'hetic_p2022_g1_students';

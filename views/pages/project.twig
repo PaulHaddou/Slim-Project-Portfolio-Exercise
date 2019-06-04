@@ -8,8 +8,8 @@
         </button>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{ path_for('home') }}">All Projects <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path_for('home') }}">All Projects</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path_for('development') }}">Development</a>
@@ -30,16 +30,16 @@
         <div class="projects d-flex justify-content-between flex-wrap">
             {% for _project in projects %}
             <div class="d-flex align-items-center flex-column flex-wrap">
-                <a href="{{ path_for('project', { slug: _project.slug }) }}">
-                    <img src="{{ _project.img }}" alt="dhdhd">
-                </a>
-                <p> {{ _project.slug  }} </p>
+                <img src="{{ _project.img }}" alt="">
+                <p> {{ _project.name  }} </p>
+                <p> {{ _project.description  }} </p>
             </div>
             {% endfor %}
         </div>
     </div>
+<h2>{{ projects.name }}</h2>
 
 
-{# <a href="{{ path_for('random_student') }}">Random student</a> #}
 
 {% include 'partials/footer.twig' %}
+
