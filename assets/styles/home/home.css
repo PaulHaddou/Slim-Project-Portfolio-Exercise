@@ -1,18 +1,18 @@
-.bodyHome {
+.body {
   font-family: 'Montserrat', sans-serif;
 }
-.bodyHome .container {
+.body .container {
   margin-top: 24px;
 }
-.bodyHome .container div div img {
+.body .container div div img {
   width: 60%;
   height: 20%;
 }
-.bodyHome .container div div a img {
+.body .container div div a img {
   width: 250px;
   height: 180px;
 }
-.bodyHome .container div div a img:hover {
+.body .container div div a img:hover {
   opacity: 0.6;
   transition: opacity 0.5s ease;
 }
