@@ -1,6 +1,7 @@
-.body {
+html {
   font-family: 'Montserrat', sans-serif;
 }
+
 .body .container {
   margin-top: 24px;
 }
@@ -52,6 +53,13 @@
   margin-top: 60px;
   font-family: 'Source Serif Pro', serif;
   margin-bottom: 100px;
+}
+
+.bodyError img {
+  z-index: -30;
+}
+.bodyError div a {
+  z-index: 30;
 }
 
 /*# sourceMappingURL=home.css.map */

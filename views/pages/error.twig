@@ -1,5 +1,10 @@
 {% include 'partials/header.twig' %}
 
-<h2>{{ code }}</h2>
+<body class="bodyError h-100">
+    <img class ="w-100 h-100 position-fixed" src="../src/{{code}}.png" alt="">
+    <div class="fixed-bottom h-25 text-center">
+        <a href="{{ path_for('home') }}" >Retour dans le droit chemin</a>
+    </div>
+</body>
 
 {% include 'partials/footer.twig' %}

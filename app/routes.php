@@ -17,6 +17,7 @@ $app
             // View data
             $viewData = [];
             $viewData['projects'] = $projects;
+            $viewData['title'] = "All Projects";
 
             return $this->view->render($response, 'pages/home.twig', $viewData);
         }
@@ -37,6 +38,7 @@ $app
             // View data
             $viewData = [];
             $viewData['projects'] = $projects;
+            $viewData['title'] = "Développement";
 
             return $this->view->render($response, 'pages/development.twig', $viewData);
         }
@@ -57,6 +59,7 @@ $app
             // View data
             $viewData = [];
             $viewData['projects'] = $projects;
+            $viewData['title'] = "Design";
 
             return $this->view->render($response, 'pages/design.twig', $viewData);
         }
@@ -73,6 +76,7 @@ $app
         {
             // View data
             $viewData = [];
+            $viewData['title'] = "Motion";
 
             return $this->view->render($response, 'pages/motion.twig', $viewData);
         }
@@ -87,12 +91,13 @@ $app
         '/about_me',
         function($request, $response)
         {
-            $query = $this->db->query('SELECT * FROM about WHERE id = 2');
-            $about = $query->fetchAll();
+            $query = $this->db->query('SELECT * FROM about');
+            $about = $query->fetch();
 
             // View data
             $viewData = [];
             $viewData['about'] = $about;
+            $viewData['title'] = "about_me";
 
             return $this->view->render($response, 'pages/about_me.twig', $viewData);
         }
@@ -121,9 +126,17 @@ $app
             $prepare->execute();
             $projects = $prepare->fetchAll();
 
+
+            if(!$projects)
+            {
+                throw new \Slim\Exception\NotFoundException($request, $response);
+            }
+
+
             // View data
             $viewData = [];
             $viewData['projects'] = $projects;
+
 
             return $this->view->render($response, 'pages/project.twig', $viewData);
         }
